@@ -1,0 +1,2 @@
+Buld project:
+$make
