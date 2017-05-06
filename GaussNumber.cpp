@@ -24,12 +24,12 @@ void GaussNumber::set(int r, int i)
     this->i = i;
 }
 
-int GaussNumber::getReal()
+int GaussNumber::getReal() const
 {
     return this->r;
 }
 
-int GaussNumber::getImg()
+int GaussNumber::getImg() const
 {
     return this->i;
 }

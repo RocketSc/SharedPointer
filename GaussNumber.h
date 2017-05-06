@@ -9,8 +9,8 @@ private:
 
 public:
     void set(int r, int i);
-    int getReal();
-    int getImg();
+    int getReal() const;
+    int getImg() const;
     
     GaussNumber();
     GaussNumber(int r, int i);

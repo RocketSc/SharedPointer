@@ -59,7 +59,7 @@ SharedPointer::~SharedPointer()
     } 
 }
 
-GaussNumber* SharedPointer::ptr()
+GaussNumber* SharedPointer::ptr() const
 {
     return container->getpObject();
 }
@@ -81,6 +81,5 @@ SharedPointer& SharedPointer::operator= (const SharedPointer p)
     this->container = p.container;
     this->container->incrCount();
 }
-
 
 

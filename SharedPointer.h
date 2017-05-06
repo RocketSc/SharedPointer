@@ -29,11 +29,24 @@ private:
 public:
     SharedPointer(GaussNumber* pObj);
     ~SharedPointer();
-    GaussNumber* ptr();
+    GaussNumber* ptr() const;
     
     //Copy Constructor and operator= overload
     SharedPointer(const SharedPointer &p);
     SharedPointer& operator= (const SharedPointer p);
+    
 };
+
+inline SharedPointer operator+ (const SharedPointer left, const SharedPointer right)
+{
+    int sumReal = left.ptr()->getReal() + right.ptr()->getReal();
+    int sumImg = left.ptr()->getImg() + right.ptr()->getImg();
+    
+    SharedPointer sum( new GaussNumber(sumReal, sumImg) );
+    
+    return sum;
+    
+}
+
 
 #endif
